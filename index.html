@@ -612,15 +612,16 @@
     .lb-room-wall {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, #f8f6f3 0%, #ede9e3 62%, #d6cfc6 62%, #c8bfb4 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f5f3f0 58%, #e0d8ce 58%, #cec5b8 100%);
     }
     /* Floor shadow line */
     .lb-room-floor-line {
       position: absolute;
-      bottom: 38%;
+      bottom: 42%;
       left: 0; right: 0;
       height: 1px;
-      background: rgba(0,0,0,0.08);
+      background: rgba(0,0,0,0.10);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
     /* Spotlight cone */
     .lb-room-spot {
@@ -628,11 +629,11 @@
       top: 0; left: 50%;
       transform: translateX(-50%);
       width: 0; height: 0;
-      border-left: 80px solid transparent;
-      border-right: 80px solid transparent;
-      border-top: 200px solid rgba(255,248,220,0.18);
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 160px solid rgba(255,245,200,0.28);
       pointer-events: none;
-      z-index: 2;
+      z-index: 4;
     }
     /* Ambient glow on wall */
     .lb-room-glow {
@@ -647,14 +648,15 @@
     /* Frame */
     .lb-room-frame {
       position: absolute;
-      top: 8%; left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -62%);
       z-index: 3;
-      width: 52%;
-      max-height: 52%;
-      border: 10px solid #e8e4df;
-      outline: 1px solid #ccc;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.12);
+      width: 46%;
+      aspect-ratio: 4/3;
+      border: 12px solid #ffffff;
+      outline: 1px solid #ddd;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.10);
       background: #fff;
     }
     .lb-room-frame img {
@@ -854,7 +856,7 @@
   <div id="lightbox-inner">
     <button id="lightbox-close" onclick="closeLightbox()">✕</button>
     <!-- Slider -->
-    <div style="position:relative; overflow:hidden;">
+    <div style="position:relative; overflow:hidden; border-radius:6px 6px 0 0;">
       <div class="lb-slider" id="lb-slider">
         <!-- Slide 1: Bild -->
         <div class="lb-slide">
